@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "pin.karasev.transportcompanyapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "pin.karasev.transportcompanyapp"
         minSdk = 34
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

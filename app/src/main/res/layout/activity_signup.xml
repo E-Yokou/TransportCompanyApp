@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="#5167E7"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".signupActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password" >
         <TextView
             android:gravity="center"
-            android:text="Sign In"
+            android:text="Sign Up"
             android:textColor="#373737"
             android:textSize="20dp"
             android:layout_width="match_parent"
@@ -93,7 +93,7 @@
         android:textSize="16dp"
         android:id="@+id/signuptext"
         android:textColor="@color/white"
-        android:text="You aren't here. Sign up"
+        android:text="Sign In"
         android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/button"
         android:layout_height="wrap_content"/>
