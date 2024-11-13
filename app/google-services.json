@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "649085430006",
+    "project_id": "transportcompany-938f1",
+    "storage_bucket": "transportcompany-938f1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649085430006:android:efb2e647fc96943370a4d7",
+        "android_client_info": {
+          "package_name": "pin.karasev.transportcompanyapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK7IZglXbbGbfdTUo9JinnBRLKN0jsOLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
