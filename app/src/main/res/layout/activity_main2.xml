@@ -17,4 +17,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <Button
+        android:layout_width="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="logout"
+        android:id="@+id/logout"
+        android:layout_height="60dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
