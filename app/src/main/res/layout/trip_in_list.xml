@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:layout_marginBottom="20dp"
+    android:background="#4D60BF">
+
+    <ImageView
+        android:id="@+id/trip_list_image"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/trip_list_numberRoute"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trip_list_departureLocation"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trip_list_destinationLocation"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trip_list_departureDatetime"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trip_list_arrivalDatetime"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/trip_list_price"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/trip_list_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/disign2"
+        android:text="Оформить" />
+
+</LinearLayout>
