@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#4D60BF"
+    android:layout_marginBottom="16dp"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/ticket_trip_number"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:paddingVertical="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Маршрут: "
+        android:textColor="#333333" />
+
+    <TextView
+        android:id="@+id/ticket_seat_number"
+        android:textSize="20sp"
+        android:paddingVertical="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Место: "
+        android:textColor="#1F1B1B" />
+
+    <TextView
+        android:id="@+id/ticket_departure_location"
+        android:textSize="20sp"
+        android:paddingVertical="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Откуда: "
+        android:textColor="#1F1B1B" />
+
+    <TextView
+        android:id="@+id/ticket_destination_location"
+        android:textSize="20sp"
+        android:paddingVertical="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Куда: "
+        android:textColor="#1F1B1B" />
+
+    <TextView
+        android:id="@+id/ticket_departure_datetime"
+        android:textSize="20sp"
+        android:paddingVertical="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Отбытие: "
+        android:textColor="#1F1B1B" />
+
+    <TextView
+        android:id="@+id/ticket_arrival_datetime"
+        android:textSize="20sp"
+        android:paddingVertical="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Прибытие: "
+        android:textColor="#1F1B1B" />
+
+    <TextView
+        android:id="@+id/ticket_price"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:paddingVertical="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="Цена: "
+        android:textColor="#333333" />
+</LinearLayout>

@@ -37,7 +37,8 @@ android {
 }
 
 dependencies {
-    implementation("org.postgresql:postgresql:42.2.24")
+    //implementation(libs.mysql.connector.java)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

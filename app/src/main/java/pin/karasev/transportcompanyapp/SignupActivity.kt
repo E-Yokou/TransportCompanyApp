@@ -1,21 +1,13 @@
 package pin.karasev.transportcompanyapp
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.google.firebase.Firebase
-import com.google.firebase.firestore.firestore
 import pin.karasev.transportcompanyapp.models.User
-import kotlin.math.log
 
 class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,15 +26,13 @@ class SignupActivity : AppCompatActivity() {
         }
 
         button.setOnClickListener {
-
             val login = userLogin.text.toString().trim()
             val email = userEmail.text.toString().trim()
             val pass = userPassword.text.toString().trim()
 
-            if(login.isEmpty() || email.isEmpty() || pass.isEmpty()){
+            if (login.isEmpty() || email.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Не все поля заполнены!", Toast.LENGTH_LONG).show()
-            }
-            else {
+            } else {
                 val user = User(login, email, pass)
 
                 val db = DbHelper(this, null)
@@ -53,6 +43,9 @@ class SignupActivity : AppCompatActivity() {
                 userLogin.text.clear()
                 userEmail.text.clear()
                 userPassword.text.clear()
+
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
             }
         }
     }

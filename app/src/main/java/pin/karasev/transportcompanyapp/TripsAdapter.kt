@@ -8,10 +8,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import pin.karasev.transportcompanyapp.models.Ticket
 import pin.karasev.transportcompanyapp.models.Trip
 
-class TripsAdapter(var trips: List<Trip>, var context: Context) : RecyclerView.Adapter<TripsAdapter.MyViewHolder>() {
+class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserLogin: String) : RecyclerView.Adapter<TripsAdapter.MyViewHolder>() {
 
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.trip_list_image)
@@ -23,6 +25,7 @@ class TripsAdapter(var trips: List<Trip>, var context: Context) : RecyclerView.A
         val price: TextView = view.findViewById(R.id.trip_list_price)
 
         val btn: Button = view.findViewById(R.id.trip_list_button)
+        val buyTicketBtn: Button = view.findViewById(R.id.trip_list_buy_ticket)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -63,6 +66,29 @@ class TripsAdapter(var trips: List<Trip>, var context: Context) : RecyclerView.A
 
             context.startActivity(intent)
         }
-    }
 
+        if (trips[position].occupiedSeats >= 50) {
+            holder.buyTicketBtn.isEnabled = false
+            holder.buyTicketBtn.text = "Билеты закончились"
+        } else {
+            holder.buyTicketBtn.setOnClickListener {
+                val db = DbHelper(context, null)
+                val userId = db.getCurrentUserId(currentUserLogin)
+                if (userId == -1) {
+                    Toast.makeText(context, "Пользователь не найден!", Toast.LENGTH_LONG).show()
+                    return@setOnClickListener
+                }
+
+                val ticket = Ticket(
+                    tripId = trips[position].id,
+                    userId = userId,
+                    seatNumber = trips[position].occupiedSeats + 1,
+                    price = trips[position].price
+                )
+                db.addTicket(ticket)
+                db.updateOccupiedSeats(trips[position].id)
+                Toast.makeText(context, "Билет куплен!", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
 }

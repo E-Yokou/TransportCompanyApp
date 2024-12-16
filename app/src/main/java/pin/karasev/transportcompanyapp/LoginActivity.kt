@@ -24,23 +24,22 @@ class LoginActivity : AppCompatActivity() {
         }
 
         button.setOnClickListener {
-
             val login = userLogin.text.toString().trim()
             val pass = userPassword.text.toString().trim()
 
-            if(login.isEmpty() || pass.isEmpty()){
+            if (login.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Не все поля заполнены!", Toast.LENGTH_LONG).show()
-            }
-            else {
+            } else {
                 val db = DbHelper(this, null)
                 val isAuth = db.getUser(login, pass)
 
-                if(isAuth) {
+                if (isAuth) {
                     Toast.makeText(this, "Пользователь $login авторизован", Toast.LENGTH_LONG).show()
                     userLogin.text.clear()
                     userPassword.text.clear()
 
-                    var intent = Intent(this, TripsActivity::class.java)
+                    val intent = Intent(this, TripsActivity::class.java)
+                    intent.putExtra("USER_LOGIN", login)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this, "Пользователь $login не авторизован!", Toast.LENGTH_LONG).show()

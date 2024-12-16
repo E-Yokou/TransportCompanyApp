@@ -16,6 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
+        <activity android:name=".ProfileActivity" />
         <activity
             android:name=".TripActivity"
             android:exported="false" />

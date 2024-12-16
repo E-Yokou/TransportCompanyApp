@@ -10,83 +10,105 @@
     tools:context=".TripActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Информация о маршруте"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:padding="16dp"
+        android:background="#4D60BF" />
+
+    <TextView
         android:id="@+id/trip_list_details_numberRoute"
         android:textStyle="bold"
         android:textSize="20sp"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Номер маршрута: "
+        android:textColor="#333333" />
 
     <TextView
         android:id="@+id/trip_list_details_departureLocation"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:paddingVertical="8dp"
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Откуда: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_details_destinationLocation"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:paddingVertical="8dp"
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Куда: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_details_departureDatetime"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:paddingVertical="8dp"
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Отбытие: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_details_arrivalDatetime"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:paddingVertical="8dp"
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Прибытие: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_details_occupiedSeats"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:paddingVertical="8dp"
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Место: "
+        android:textColor="#2F2B2B" />
 
     <TextView
         android:id="@+id/trip_list_details_price"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:paddingVertical="10dp"
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Цена: "
+        android:textColor="#333333" />
 
-
-    <Button
-        android:id="@+id/trip_list_button"
-        android:layout_gravity="center"
-        android:background="@drawable/disign2"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Купить" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="20dp">
 
-
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:background="@drawable/disign2"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+    </LinearLayout>
 </LinearLayout>

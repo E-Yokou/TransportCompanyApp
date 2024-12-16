@@ -3,85 +3,105 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="20dp"
-    android:layout_marginBottom="20dp"
-    android:background="#4D60BF">
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:layout_marginBottom="16dp"
+    android:elevation="4dp"
+    android:backgroundTint="#4D60BF">
 
     <ImageView
         android:id="@+id/trip_list_image"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/app_name" />
 
     <TextView
         android:id="@+id/trip_list_numberRoute"
         android:textStyle="bold"
-        android:textSize="20sp"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:paddingVertical="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Номер маршрута: "
+        android:textColor="#333333" />
 
     <TextView
         android:id="@+id/trip_list_departureLocation"
-        android:textStyle="bold"
         android:textSize="20sp"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="20dp"
+        android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Откуда: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_destinationLocation"
-        android:textStyle="bold"
         android:textSize="20sp"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="20dp"
+        android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Куда: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_departureDatetime"
-        android:textStyle="bold"
         android:textSize="20sp"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="20dp"
+        android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Отбытие: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_arrivalDatetime"
-        android:textStyle="bold"
         android:textSize="20sp"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="20dp"
+        android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Прибытие: "
+        android:textColor="#1F1B1B" />
 
     <TextView
         android:id="@+id/trip_list_price"
         android:textStyle="bold"
-        android:textSize="24sp"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="20dp"
+        android:textSize="20sp"
+        android:paddingVertical="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
-        android:text="TextView" />
+        android:text="Цена: "
+        android:textColor="#333333" />
 
-    <Button
-        android:id="@+id/trip_list_button"
-        android:layout_width="200dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/disign2"
-        android:text="Оформить" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/trip_list_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/disign2"
+            android:text="Подробнее"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/trip_list_buy_ticket"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/disign2"
+            android:text="Купить"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+    </LinearLayout>
 
 </LinearLayout>
