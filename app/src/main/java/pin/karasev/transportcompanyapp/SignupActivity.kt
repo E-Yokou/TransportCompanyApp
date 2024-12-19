@@ -33,7 +33,7 @@ class SignupActivity : AppCompatActivity() {
             if (login.isEmpty() || email.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Не все поля заполнены!", Toast.LENGTH_LONG).show()
             } else {
-                val user = User(login, email, pass)
+                val user = User(login, email, pass, "user") // Automatically assign "user" role
 
                 val db = DbHelper(this, null)
                 db.addUser(user)

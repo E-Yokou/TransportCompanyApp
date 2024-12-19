@@ -34,11 +34,16 @@ class LoginActivity : AppCompatActivity() {
                 val isAuth = db.getUser(login, pass)
 
                 if (isAuth) {
+                    val role = db.getUserRole(login) // Get the user's role
                     Toast.makeText(this, "Пользователь $login авторизован", Toast.LENGTH_LONG).show()
                     userLogin.text.clear()
                     userPassword.text.clear()
 
-                    val intent = Intent(this, TripsActivity::class.java)
+                    val intent = if (role == "admin") {
+                        Intent(this, AdminActivity::class.java)
+                    } else {
+                        Intent(this, TripsActivity::class.java)
+                    }
                     intent.putExtra("USER_LOGIN", login)
                     startActivity(intent)
                 } else {

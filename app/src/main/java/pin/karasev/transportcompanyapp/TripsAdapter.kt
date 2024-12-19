@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import pin.karasev.transportcompanyapp.models.Ticket
 import pin.karasev.transportcompanyapp.models.Trip
 
-class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserLogin: String) : RecyclerView.Adapter<TripsAdapter.MyViewHolder>() {
+class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserLogin: String, var isAdmin: Boolean) : RecyclerView.Adapter<TripsAdapter.MyViewHolder>() {
 
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.trip_list_image)
@@ -24,12 +24,13 @@ class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserL
         val arrivalDatetime: TextView = view.findViewById(R.id.trip_list_arrivalDatetime)
         val price: TextView = view.findViewById(R.id.trip_list_price)
 
-        val btn: Button = view.findViewById(R.id.trip_list_button)
+        val btnDetail: Button = view.findViewById(R.id.trip_list_button)
         val buyTicketBtn: Button = view.findViewById(R.id.trip_list_buy_ticket)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.trip_in_list, parent, false)
+        val layoutId = R.layout.trip_in_list
+        val view = LayoutInflater.from(parent.context).inflate(layoutId, parent, false)
         return MyViewHolder(view)
     }
 
@@ -53,7 +54,7 @@ class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserL
 
         holder.image.setImageResource(imageId)
 
-        holder.btn.setOnClickListener {
+        holder.btnDetail.setOnClickListener {
             var intent = Intent(context, TripActivity::class.java)
 
             intent.putExtra("tripNumberTrip", "Номер маршрута: " + trips[position].tripNumber)

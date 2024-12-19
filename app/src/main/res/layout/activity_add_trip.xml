@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/trip_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:hint="Номер маршрута" />
+
+    <EditText
+        android:id="@+id/departure_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Место отправления" />
+
+    <EditText
+        android:id="@+id/destination_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Место назначения" />
+
+    <EditText
+        android:id="@+id/departure_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Время отправления" />
+
+    <EditText
+        android:id="@+id/arrival_datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Время прибытия" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Цена"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_add_trip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавить поездку" />
+</LinearLayout>

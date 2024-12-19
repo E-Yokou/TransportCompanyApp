@@ -22,7 +22,7 @@ class TripsActivity : AppCompatActivity() {
         val currentUserLogin = intent.getStringExtra("USER_LOGIN") ?: ""
 
 //        val trips = arrayListOf<Trip>()
-
+//
 //        trips.add(Trip(1, "logo", "A1", "Муром", "Ковардицы", 0, "12.12.2024 | 12:00", "12.12.2024 | 13:00", 150))
 //        trips.add(Trip(2, "logo", "A1", "Муром", "Ковардицы", 0, "12.12.2024 | 15:00", "12.12.2024 | 16:00", 150))
 //        trips.add(Trip(3, "logo", "A1", "Муром", "Ковардицы", 0, "12.12.2024 | 18:00", "12.12.2024 | 19:00", 150))
@@ -32,7 +32,7 @@ class TripsActivity : AppCompatActivity() {
 //        trips.add(Trip(7, "logo", "A1", "Муром", "Судогда", 0, "12.12.2024 | 12:00", "12.12.2024 | 15:00", 150))
 //        trips.add(Trip(8, "logo", "A1", "Муром", "Судогда", 0, "12.12.2024 | 15:00", "12.12.2024 | 18:00", 150))
 //        trips.add(Trip(9, "logo", "A1", "Муром", "Судогда", 0, "12.12.2024 | 18:00", "12.12.2024 | 21:00", 150))
-
+//
 //        // Вставляем данные о поездках в базу данных
 //        val db = DbHelper(this, null)
 //        for (trip in trips) {
@@ -44,7 +44,7 @@ class TripsActivity : AppCompatActivity() {
         var trips = db.getAllTrips()
 
         tripsList.layoutManager = LinearLayoutManager(this)
-        tripsList.adapter = TripsAdapter(trips, this, currentUserLogin)
+        tripsList.adapter = TripsAdapter(trips, this, currentUserLogin, isAdmin = false)
 
         searchButton.setOnClickListener {
             val departure = searchDeparture.text.toString().trim()
@@ -54,7 +54,7 @@ class TripsActivity : AppCompatActivity() {
             } else {
                 db.searchTrips(departure, destination)
             }
-            tripsList.adapter = TripsAdapter(trips, this, currentUserLogin)
+            tripsList.adapter = TripsAdapter(trips, this, currentUserLogin, isAdmin = false)
         }
 
         btnProfile.setOnClickListener {
