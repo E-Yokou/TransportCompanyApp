@@ -33,11 +33,11 @@ class TripsAdminAdapter(var trips: List<Trip>, var context: Context) : RecyclerV
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val trip = trips[position]
-        holder.tripNumber.text = "Номер маршрута: " + trip.tripNumber
-        holder.departureLocation.text = "Откуда: " + trip.departureLocation
-        holder.destinationLocation.text = "Куда: " + trip.destinationLocation
-        holder.departureDatetime.text = "Отбытие: " + trip.departureDatetime
-        holder.arrivalDatetime.text = "Прибытие: " + trip.arrivalDatetime
+        holder.tripNumber.text =          "Номер маршрута: " + trip.tripNumber
+        holder.departureLocation.text =   "Откуда:   " + trip.departureLocation
+        holder.destinationLocation.text = "Куда:       " + trip.destinationLocation
+        holder.departureDatetime.text =   "Отбытие:      " + trip.departureDatetime
+        holder.arrivalDatetime.text =     "Прибытие: " + trip.arrivalDatetime
         holder.price.text = trip.price.toString() + "₽"
 
         holder.btnDetail.setOnClickListener {

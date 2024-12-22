@@ -49,7 +49,7 @@
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Куда: "
+        android:text="Куда:   "
         android:textColor="#1F1B1B" />
 
     <TextView
@@ -59,7 +59,7 @@
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Отбытие: "
+        android:text="Отбытие:  "
         android:textColor="#1F1B1B" />
 
     <TextView
@@ -79,7 +79,7 @@
         android:paddingHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Место: "
+        android:text="Свободных мест: "
         android:textColor="#2F2B2B" />
 
     <TextView
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:text="Назад"
             android:background="@drawable/disign2"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:padding="10dp" />
     </LinearLayout>
 </LinearLayout>

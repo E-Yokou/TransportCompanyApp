@@ -23,11 +23,11 @@ class TripDetailsActivity : AppCompatActivity() {
         val totalPrice: TextView = findViewById(R.id.trip_details_totalPrice)
         val btnBack: Button = findViewById(R.id.btn_back)
 
-        tripNumber.text = "Номер маршрута: " + trip.tripNumber
-        departureLocation.text = "Откуда: " + trip.departureLocation
-        destinationLocation.text = "Куда: " + trip.destinationLocation
-        occupiedSeats.text = "Занятых мест: " + tickets.size
-        totalPrice.text = "Сумма всех купленных мест: " + (tickets.size * trip.price) + "₽"
+        tripNumber.text =          "Номер маршрута: " + trip.tripNumber
+        departureLocation.text =   "Откуда: " + trip.departureLocation
+        destinationLocation.text = "Куда:   " + trip.destinationLocation
+        occupiedSeats.text =       "Занятых мест: " + tickets.size
+        totalPrice.text =          "Сумма всех купленных мест: " + (tickets.size * trip.price) + "₽"
 
         btnBack.setOnClickListener {
             finish()

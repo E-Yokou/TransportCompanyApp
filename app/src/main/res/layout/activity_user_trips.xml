@@ -11,6 +11,7 @@
         android:text="Маршруты пользователя"
         android:textSize="24sp"
         android:gravity="center"
+        android:textColor="#000000"
         android:paddingBottom="16dp"/>
 
     <androidx.recyclerview.widget.RecyclerView

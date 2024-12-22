@@ -39,11 +39,11 @@ class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserL
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.numberTrip.text = "Номер маршрута: " + trips[position].tripNumber
-        holder.departureLocation.text = "Откуда: " + trips[position].departureLocation
-        holder.destinationLocation.text = "Куда: " + trips[position].destinationLocation
-        holder.departureDatetime.text = "Отбытие: " + trips[position].departureDatetime
-        holder.arrivalDatetime.text = "Прибытие: " + trips[position].arrivalDatetime
+        holder.numberTrip.text =          "Номер маршрута: " + trips[position].tripNumber
+        holder.departureLocation.text =   "Откуда:   " + trips[position].departureLocation
+        holder.destinationLocation.text = "Куда:       " + trips[position].destinationLocation
+        holder.departureDatetime.text =   "Отбытие:    " + trips[position].departureDatetime
+        holder.arrivalDatetime.text =     "Прибытие: " + trips[position].arrivalDatetime
         holder.price.text = trips[position].price.toString() + "₽"
 
         var imageId = context.resources.getIdentifier(
@@ -59,9 +59,9 @@ class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserL
 
             intent.putExtra("tripNumberTrip", "Номер маршрута: " + trips[position].tripNumber)
             intent.putExtra("tripDepartureLocation", "Откуда: " + trips[position].departureLocation)
-            intent.putExtra("tripDestinationLocation", "Откуда: " + trips[position].destinationLocation)
-            intent.putExtra("tripOccupiedSeats", "Место: " + trips[position].occupiedSeats)
-            intent.putExtra("tripDepartureDatetime", "Отбытие: " + trips[position].departureDatetime)
+            intent.putExtra("tripDestinationLocation", "Куда:   " + trips[position].destinationLocation)
+            intent.putExtra("tripOccupiedSeats", "Свободных мест: " + getFreeSeats(trips[position].occupiedSeats))
+            intent.putExtra("tripDepartureDatetime", "Отбытие:   " + trips[position].departureDatetime)
             intent.putExtra("tripArrivalDatetime", "Прибытие: " + trips[position].arrivalDatetime)
             intent.putExtra("tripPrice", trips[position].price.toString() + "₽")
 
@@ -91,5 +91,9 @@ class TripsAdapter(var trips: List<Trip>, var context: Context, var currentUserL
                 Toast.makeText(context, "Билет куплен!", Toast.LENGTH_LONG).show()
             }
         }
+    }
+
+    private fun getFreeSeats(occupiedSeats: Int): Any? {
+        return 50 - occupiedSeats
     }
 }

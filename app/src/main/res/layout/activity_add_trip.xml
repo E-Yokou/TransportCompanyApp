@@ -11,36 +11,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:textSize="20dp"
         android:hint="Номер маршрута" />
 
     <EditText
         android:id="@+id/departure_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:hint="Место отправления" />
 
     <EditText
         android:id="@+id/destination_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:hint="Место назначения" />
 
     <EditText
         android:id="@+id/departure_datetime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:hint="Время отправления" />
 
     <EditText
         android:id="@+id/arrival_datetime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:hint="Время прибытия" />
 
     <EditText
         android:id="@+id/price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="20dp"
         android:hint="Цена"
         android:inputType="number" />
 
@@ -49,5 +55,6 @@
         android:background="@drawable/disign2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:text="Добавить поездку" />
 </LinearLayout>

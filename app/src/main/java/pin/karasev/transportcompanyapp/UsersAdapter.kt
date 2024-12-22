@@ -34,7 +34,7 @@ class UsersAdapter(var users: List<User>, val context: AdminActivity) : Recycler
         val user = users[position]
         holder.login.text = "Логин: ${user.login}"
         holder.email.text = "Email: ${user.email}"
-        holder.role.text = "Роль: ${user.role}"
+        holder.role.text =  "Роль:  ${user.role}"
 
         holder.btnMakeAdmin.setOnClickListener {
             if (user.role != "admin") {

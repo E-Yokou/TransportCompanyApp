@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:text="Пользователи"
             android:background="@drawable/disign2"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:padding="10dp" />
 
         <Button
@@ -41,7 +41,7 @@
             android:layout_weight="1"
             android:text="Билеты"
             android:background="@drawable/disign2"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:padding="10dp" />
 
         <Button
@@ -52,7 +52,7 @@
             android:background="@drawable/disign2"
             android:padding="10dp"
             android:text="Поездки"
-            android:textColor="#FFFFFF" />
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/btn_add_trip"
@@ -61,7 +61,7 @@
             android:layout_weight="1"
             android:text="Добавить поездку"
             android:background="@drawable/disign2"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:padding="10dp" />
     </LinearLayout>
 

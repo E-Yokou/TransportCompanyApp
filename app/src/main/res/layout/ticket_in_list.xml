@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Маршрут: "
-        android:textColor="#333333" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/ticket_seat_number"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Место: "
-        android:textColor="#1F1B1B" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/ticket_departure_location"
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Откуда: "
-        android:textColor="#1F1B1B" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/ticket_destination_location"
@@ -42,8 +42,8 @@
         android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Куда: "
-        android:textColor="#1F1B1B" />
+        android:text="Куда:   "
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/ticket_departure_datetime"
@@ -51,8 +51,8 @@
         android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Отбытие: "
-        android:textColor="#1F1B1B" />
+        android:text="Отбытие:  "
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/ticket_arrival_datetime"
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Прибытие: "
-        android:textColor="#1F1B1B" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/ticket_price"
@@ -72,5 +72,5 @@
         android:layout_height="wrap_content"
         android:gravity="end"
         android:text="Цена: "
-        android:textColor="#333333" />
+        android:textColor="#000000" />
 </LinearLayout>

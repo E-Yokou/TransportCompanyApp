@@ -3,44 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="8dp"
+    android:background="#4D60BF">
 
-    <TextView
+<TextView
         android:id="@+id/user_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Логин: "
-        android:textSize="16sp" />
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/user_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:text="Email: "
-        android:textSize="16sp" />
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/user_role"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Роль: "
-        android:textSize="16sp" />
+        android:text="Роль:  "
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_make_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/disign1"
+        android:textColor="#000000"
         android:text="Сделать админом" />
 
     <Button
         android:id="@+id/btn_make_user"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/disign1"
+        android:textColor="#000000"
         android:text="Сделать пользователем" />
 
     <Button
         android:id="@+id/btn_view_tickets"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/disign3"
+        android:textColor="#000000"
         android:text="Просмотреть последние билеты по маршрутам" />
 </LinearLayout>

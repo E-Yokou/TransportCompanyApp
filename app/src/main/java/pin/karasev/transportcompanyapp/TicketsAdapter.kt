@@ -30,12 +30,12 @@ class TicketsAdapter(var tickets: List<TicketDto>) : RecyclerView.Adapter<Ticket
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val ticket = tickets[position]
-        holder.tripNumber.text = "Маршрут: " + ticket.tripNumber
-        holder.seatNumber.text = "Место: " + ticket.seatNumber.toString()
-        holder.price.text = "Цена: " + ticket.price.toString() + "₽"
-        holder.departureLocation.text = "Откуда: " + ticket.departureLocation
-        holder.destinationLocation.text = "Куда: " + ticket.destinationLocation
-        holder.departureDatetime.text = "Отбытие: " + ticket.departureDatetime
-        holder.arrivalDatetime.text = "Прибытие: " + ticket.arrivalDatetime
+        holder.tripNumber.text =          "Маршрут:  " + ticket.tripNumber
+        holder.seatNumber.text =          "Место:    " + ticket.seatNumber.toString()
+        holder.price.text =               "Цена:     " + ticket.price.toString() + "₽"
+        holder.departureLocation.text =   "Откуда:   " + ticket.departureLocation
+        holder.destinationLocation.text = "Куда:     " + ticket.destinationLocation
+        holder.departureDatetime.text =   "Отбытие:  " + ticket.departureDatetime
+        holder.arrivalDatetime.text =     "Прибытие: " + ticket.arrivalDatetime
     }
 }

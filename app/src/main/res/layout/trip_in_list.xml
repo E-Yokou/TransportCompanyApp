@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Номер маршрута: "
-        android:textColor="#333333" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/trip_list_departureLocation"
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Откуда: "
-        android:textColor="#1F1B1B" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/trip_list_destinationLocation"
@@ -43,8 +43,8 @@
         android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Куда: "
-        android:textColor="#1F1B1B" />
+        android:text="Куда:   "
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/trip_list_departureDatetime"
@@ -52,8 +52,8 @@
         android:paddingVertical="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Отбытие: "
-        android:textColor="#1F1B1B" />
+        android:text="Отбытие:  "
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/trip_list_arrivalDatetime"
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Прибытие: "
-        android:textColor="#1F1B1B" />
+        android:textColor="#000000" />
 
     <TextView
         android:id="@+id/trip_list_price"
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:gravity="end"
         android:text="Цена: "
-        android:textColor="#333333" />
+        android:textColor="#000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,9 +88,9 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/disign2"
+            android:background="@drawable/disign3"
             android:text="Подробнее"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:padding="10dp" />
 
         <Button
@@ -98,9 +98,9 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:background="@drawable/disign2"
+            android:background="@drawable/disign1"
             android:text="Купить"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:padding="10dp" />
     </LinearLayout>
 
