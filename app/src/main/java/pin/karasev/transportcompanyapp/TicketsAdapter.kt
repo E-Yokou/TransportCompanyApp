@@ -1,6 +1,5 @@
 package pin.karasev.transportcompanyapp
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,12 +29,13 @@ class TicketsAdapter(var tickets: List<TicketDto>) : RecyclerView.Adapter<Ticket
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tripNumber.text = "Маршрут: " + tickets[position].tripNumber
-        holder.seatNumber.text = "Место: " + tickets[position].seatNumber.toString()
-        holder.price.text = "Цена: " + tickets[position].price.toString() + "₽"
-        holder.departureLocation.text = "Откуда: " + tickets[position].departureLocation
-        holder.destinationLocation.text = "Куда: " + tickets[position].destinationLocation
-        holder.departureDatetime.text = "Отбытие: " + tickets[position].departureDatetime
-        holder.arrivalDatetime.text = "Прибытие: " + tickets[position].arrivalDatetime
+        val ticket = tickets[position]
+        holder.tripNumber.text = "Маршрут: " + ticket.tripNumber
+        holder.seatNumber.text = "Место: " + ticket.seatNumber.toString()
+        holder.price.text = "Цена: " + ticket.price.toString() + "₽"
+        holder.departureLocation.text = "Откуда: " + ticket.departureLocation
+        holder.destinationLocation.text = "Куда: " + ticket.destinationLocation
+        holder.departureDatetime.text = "Отбытие: " + ticket.departureDatetime
+        holder.arrivalDatetime.text = "Прибытие: " + ticket.arrivalDatetime
     }
 }

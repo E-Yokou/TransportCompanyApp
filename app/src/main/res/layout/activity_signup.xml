@@ -78,7 +78,7 @@
         android:ems="10"
         android:gravity="center"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:textColorHint="#616161"

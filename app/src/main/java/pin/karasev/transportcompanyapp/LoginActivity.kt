@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
                 val isAuth = db.getUser(login, pass)
 
                 if (isAuth) {
-                    val role = db.getUserRole(login) // Get the user's role
+                    val role = db.getUserRole(login)
                     Toast.makeText(this, "Пользователь $login авторизован", Toast.LENGTH_LONG).show()
                     userLogin.text.clear()
                     userPassword.text.clear()

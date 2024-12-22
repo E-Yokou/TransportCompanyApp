@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#5167E7"
+    android:layout_marginBottom="16dp"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/trip_admin_item_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Номер маршрута: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/trip_admin_item_departureLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Откуда: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/trip_admin_item_destinationLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Куда: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/trip_admin_item_departureDatetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Отбытие: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/trip_admin_item_arrivalDatetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Прибытие: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/trip_admin_item_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цена: "
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/trip_admin_item_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Подробнее"
+        android:background="@drawable/disign2"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

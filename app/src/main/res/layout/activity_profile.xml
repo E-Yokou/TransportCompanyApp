@@ -31,13 +31,23 @@
         android:textSize="24dp"
         android:padding="4dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ticketsList"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="30dp"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextColor="#FFFFFF"
+        app:tabSelectedTextColor="#FFFFFF"
+        app:tabIndicatorColor="#FFFFFF"
+        android:background="#4D60BF" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".UserTripsActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminActivity"
             android:exported="false" />
         <activity android:name=".ProfileActivity" />
@@ -27,6 +30,7 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".AddTripActivity" />
         <activity android:name=".EditTripActivity" />
+        <activity android:name=".TripDetailsActivity" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">

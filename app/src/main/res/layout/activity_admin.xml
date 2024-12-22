@@ -3,30 +3,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#5167E7">
 
-    <Button
-        android:id="@+id/btn_view_users"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Просмотреть пользователей" />
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Админ панель"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:padding="16dp"
+        android:background="#4D60BF" />
 
-    <Button
-        android:id="@+id/btn_view_tickets"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Просмотреть билеты" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#4D60BF">
 
-    <Button
-        android:id="@+id/btn_add_trip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Добавить новую поездку" />
+        <Button
+            android:id="@+id/btn_view_users"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Пользователи"
+            android:background="@drawable/disign2"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btn_view_tickets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Билеты"
+            android:background="@drawable/disign2"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/btn_view_trips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/disign2"
+            android:padding="10dp"
+            android:text="Поездки"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_add_trip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Добавить поездку"
+            android:background="@drawable/disign2"
+            android:textColor="#FFFFFF"
+            android:padding="10dp" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:visibility="gone" />
+
 </LinearLayout>

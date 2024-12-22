@@ -2,6 +2,7 @@ package pin.karasev.transportcompanyapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -32,20 +33,32 @@ class SignupActivity : AppCompatActivity() {
 
             if (login.isEmpty() || email.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Не все поля заполнены!", Toast.LENGTH_LONG).show()
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Некорректный формат email!", Toast.LENGTH_LONG).show()
             } else {
-                val user = User(login, email, pass, "user") // Automatically assign "user" role
-
                 val db = DbHelper(this, null)
-                db.addUser(user)
+                if (db.isEmailExists(email)) {
+                    Toast.makeText(this, "Email уже используется другим пользователем!", Toast.LENGTH_LONG).show()
+                } else {
+                    // Устанавливаем роль "admin" для определенного email, иначе "user"
+                    val role = if (email.equals("admin@gmail.com", ignoreCase = true)) "admin" else "user"
 
-                Toast.makeText(this, "Пользователь добавлен", Toast.LENGTH_LONG).show()
+                    val user = User(
+                        login = login,
+                        email = email,
+                        pass = pass,
+                        role = role
+                    )
+                    db.addUser(user)
+                    Toast.makeText(this, "Пользователь добавлен как $role", Toast.LENGTH_LONG).show()
 
-                userLogin.text.clear()
-                userEmail.text.clear()
-                userPassword.text.clear()
+                    userLogin.text.clear()
+                    userEmail.text.clear()
+                    userPassword.text.clear()
 
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
     }

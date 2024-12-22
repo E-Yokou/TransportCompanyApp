@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_view_users"
+        android:title="Просмотреть пользователей" />
+    <item
+        android:id="@+id/menu_view_tickets"
+        android:title="Просмотреть билеты" />
+    <item
+        android:id="@+id/menu_view_trips"
+        android:title="Просмотреть поездки" />
+    <item
+        android:id="@+id/menu_add_trip"
+        android:title="Добавить новую поездку" />
+</menu>

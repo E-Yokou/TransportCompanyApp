@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#5167E7">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Информация о маршруте"
+        android:textColor="#FFFFFF"
+        android:textSize="32dp"
+        android:padding="16dp"
+        android:background="#4D60BF" />
+
+    <TextView
+        android:id="@+id/trip_details_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Номер маршрута: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/trip_details_departureLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Откуда: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/trip_details_destinationLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Куда: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/trip_details_occupiedSeats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Занятых мест: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/trip_details_totalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сумма всех купленных мест: "
+        android:textSize="18sp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назад"
+        android:background="@drawable/disign2"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:layout_margin="16dp" />
+</LinearLayout>

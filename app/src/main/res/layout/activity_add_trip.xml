@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#5167E7">
 
     <EditText
         android:id="@+id/trip_number"
@@ -45,6 +46,7 @@
 
     <Button
         android:id="@+id/btn_add_trip"
+        android:background="@drawable/disign2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Добавить поездку" />
